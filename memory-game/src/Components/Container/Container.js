@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../Header/Header';
-import DroppableImages from '../PictureGame/DroppableImages';
+import GameWrapper from '../PictureGame/GameWrapper';
 
 const Container = () => {
         return ( 
                 <div>
                 <Header></Header>
-                <DroppableImages />
+                <GameWrapper />
                 </div>
          );
 }
