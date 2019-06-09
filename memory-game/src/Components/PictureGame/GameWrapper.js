@@ -34,43 +34,43 @@ export default class GameWrapper extends React.Component {
 
   componentDidMount() {
     this.setState({
-      pictures: pictureData
+      pictures: pictureData,
     })
   };
+
+  src(e) {
+    const resultData = {alt: e.target.alt};
+    
+    this.setState({
+      result: this.state.result.concat(resultData)
+    })
+  }
+
+  show(e) {
+    const copy = this.state.result;
+    console.log(copy)
+  }
 
   render() {
     return (
       <div>
-      <StyledDiv>
-        <Droppable id="dr1" >
-          {this.state.pictures.map(image => {
-            return (
-              <div>
-                <section>
-                  <Draggable id={uuid()}><img id={uuid()} src={image.img} alt="memory game"></img>
+        <StyledDiv>
+          <Droppable id="dr1" >
+            {this.state.pictures.map(image => {
+              return (
+                <div key={uuid()}>
+                  <Draggable id={uuid()} safesrc={this.src}>
+                    <img id={uuid()} src={image.img} alt={image.alt}></img>
                   </Draggable>
-                </section>
-                <section>
-                  <Draggable id={uuid()}><img id={uuid()} src={image.img2} alt="memory game"></img>
-                  </Draggable>
-                </section>
-                <section>
-                  <Draggable id={uuid()}><img id={uuid()} src={image.img3} alt="memory game"></img>
-                  </Draggable>
-                </section>
-                <section>
-                  <Draggable id={uuid()}><img id={uuid()} src={image.img4} alt="memory game"></img>
-                  </Draggable>
-                </section>
-              </div>
-            )
-          })}
-        </Droppable>
-        <Droppable id="dr2" >
-        </Droppable>
-      </StyledDiv>
+                </div>
+              )
+            })}
+          </Droppable>
+          <Droppable id="dr2" showme={this.show}>
+          </Droppable>
+        </StyledDiv>
         <button onClick={this.checkResult}>Show the result</button>
-        </div>
+      </div>
     );
   }
 }

@@ -1,34 +1,72 @@
 const pictureData = [
         {
                 img: "./Pictures/bulb.jpg",
-                img2: "./Pictures/chess.jpg",
-                img3: "./Pictures/chip.jpg",
-                img4: "./Pictures/water.jpg"
+                alt: "bulb"
+        },
+        {
+                img: "./Pictures/chess.jpg",
+                alt: "chess"
 
         },
-
         {
                 img: "./Pictures/chip.jpg",
-                img2: "./Pictures/colorfire.jpg",
-                img3: "./Pictures/earth.jpg",
-                img4: "./Pictures/fire.jpg"
-        },
+                alt: "chip"
 
+        },
+        {
+                img: "./Pictures/colorfire.jpg",
+                alt: "colorfire"
+        },
+        {
+                img: "./Pictures/earth.jpg",
+                alt: "earth"
+
+        },
         {
                 img: "./Pictures/fire.jpg",
-                img2: "./Pictures/foots.jpg",
-                img3: "./Pictures/haribo.jpg",
-                img4: "./Pictures/head.jpg"
-
-
+                alt: "fire"
+        },
+        {
+                img: "./Pictures/foots.jpg",
+                alt: "foots"
+        },
+        {
+                img: "./Pictures/haribo.jpg",
+                alt: "haribo"
+        },
+        {
+                img: "./Pictures/head.jpg",
+                alt: "head"
         },
         {
                 img: "./Pictures/monkey.jpg",
-                img2: "../../Pictures/waterfall.jpg",
-                img3: "./Pictures/rubrik.jpg",
-                img4: "./Pictures/think.jpg"
+                alt: "monkey"
+        },
+        {
+                img: "./Pictures/planet.jpg",
+                alt: "planet"
+        },
+        {
+                img: "./Pictures/rubrik.jpg",
+                alt: "rubrik"
+        },
+        {
+                img: "./Pictures/think.jpg",
+                alt: "think"
 
         },
+        {
+                img: "../../Pictures/water.jpg",
+                alt: "water"
+        },
+        {
+                img: "../../Pictures/waterfall.jpg",
+                alt: "waterfall"
+        },
+        {
+                img: "../../Pictures/Home.jpg",
+                alt: "home"
+        }
 ]
 
 export default pictureData;
