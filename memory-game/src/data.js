@@ -1,54 +1,56 @@
-export const cardData = [
+const pictureData = [
         {
-                img: "./pictures/bulb.jpg"
+                img: "./Pictures/bulb.jpg"
         },
         {
-                img: "./pictures/chess.jpg"
+                img: "./Pictures/chess.jpg"
 
         },
         {
-                img: "./pictures/chip.jpg"
+                img: "./Pictures/chip.jpg"
 
         },
         {
-                img: "./pictures/colorfire.jpg"
+                img: "./Pictures/colorfire.jpg"
         },
         {
-                img: "./pictures/earth.jpg"
+                img: "./Pictures/earth.jpg"
 
         },
         {
-                img: "./pictures/fire.jpg"
+                img: "./Pictures/fire.jpg"
         },
         {
-                img: "./pictures/fire.jpg"
+                img: "./Pictures/fire.jpg"
         },
         {
-                img: "./pictures/foots.jpg"
+                img: "./Pictures/foots.jpg"
         },
         {
-                img: "./pictures/haribo.jpg"
+                img: "./Pictures/haribo.jpg"
         },
         {
-                img: "./pictures/head.jpg"
+                img: "./Pictures/head.jpg"
         },
         {
-                img: "./pictures/monkey.jpg"
+                img: "./Pictures/monkey.jpg"
         },
         {
-                img: "./pictures/planet.jpg"
+                img: "./Pictures/planet.jpg"
         },
         {
-                img: "./pictures/rubrik.jpg"
+                img: "./Pictures/rubrik.jpg"
         },
         {
-                img: "./pictures/think.jpg"
+                img: "./Pictures/think.jpg"
 
         },
         {
-                img: "./pictures/water.jpg"
+                img: "../../Pictures/water.jpg"
         },
         {
-                img: "./pictures/waterfall.jpg"
+                img: "../../Pictures/waterfall.jpg"
         }
 ]
+
+export default pictureData;
