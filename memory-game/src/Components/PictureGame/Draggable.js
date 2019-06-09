@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 const StyledDiv = styled.div`
 
-width: 100%;
+/* width: 100%;
 height: 2rem;
 background-color: green;
-margin: 3rem;
+margin: 3rem; */
 
 `;
 
@@ -22,9 +22,9 @@ export default class Draggable extends React.Component {
 
         render() { 
                 return ( 
-                        <StyledDiv id={this.props.id} draggable='true' onDragStart={this.drag} onDragOver={this.dontAllowDrop} >
+                        <div id={this.props.id} draggable='true' onDragStart={this.drag} onDragOver={this.dontAllowDrop} >
 {this.props.children}
-                        </StyledDiv>
+                        </div>
                  );
         }
 }
