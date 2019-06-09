@@ -11,7 +11,7 @@ img {
 }`;
 
 
-const Images = () => {
+const DroppableImages = () => {
         return ( 
                 pictureData.map((image, index) => {
                         return(
@@ -26,4 +26,4 @@ const Images = () => {
          );
 }
  
-export default Images;
+export default DroppableImages;
