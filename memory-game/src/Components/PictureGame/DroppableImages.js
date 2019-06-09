@@ -11,19 +11,32 @@ img {
 }`;
 
 
-const DroppableImages = () => {
-        return ( 
-                pictureData.map((image, index) => {
-                        return(
-                                <StyledDiv key={index}>
-                                        <img src={image.img} alt="memory game" />
-                                        <img src={image.img2} alt="memory game" />
-                                        <img src={image.img3} alt="memory game" />
-                                        <img src={image.img4} alt="memory game" />
-                                </StyledDiv>
-                        )
-                })
-         );
+export default class DroppableImages extends React.Component {
+        
+        drop = (e) => {
+                e.preventDefault();
+                const data = e.dataTransfer.getData('transfer');
+                e.target.appendChild(document.getElementById(data));
+        }
+
+        allowDrop = (e) => {
+                e.preventDefault();
+        }
+
+        render() {
+                return (
+                        <StyledDiv id={this.props.id} onDrop={this.drop} onDragOver={this.allowDrop}>
+                                {pictureData.map((image, index) => {
+                                        return (
+                                                <div key={index}>
+                                                        <img src={image.img} alt="memory game" />
+                                                        <img src={image.img2} alt="memory game" />
+                                                        <img src={image.img3} alt="memory game" />
+                                                        <img src={image.img4} alt="memory game" />
+                                                </div>
+                                        )
+                                })}
+                        </StyledDiv>
+                );
+        }
 }
- 
-export default DroppableImages;
