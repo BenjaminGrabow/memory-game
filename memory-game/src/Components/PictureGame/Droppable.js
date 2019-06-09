@@ -1,14 +1,14 @@
 import React from 'react';
-// import pictureData from '../../data';
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
 
 background-color: #555;
 width: 80%;
-height: 30rem;
-margin: 3.2rem;
+height: 35rem;
+margin: .5rem;
 display: flex;
+flex-wrap: wrap;
 
 `;
 

@@ -8,7 +8,7 @@ import uuid from 'uuid';
 const StyledDiv = styled.div`
 
 width: 100%;
-padding: 3.2rem;
+
 display: flex;
 justify-content: center;
 
@@ -17,8 +17,9 @@ img {
         color: #555;
         background-color: white;
         border-radius: .3rem;
-        width: 70%;
+        width: 5rem;
         height: 5rem;
+        margin: .5rem;
 }
 
 `;
@@ -30,22 +31,22 @@ export default class GameWrapper extends React.Component {
                         <StyledDiv>
                                <Droppable id="dr1" >
 {pictureData.map(image => {
-        return(
+          return(
                 <div>
         <section>
-<Draggable id={uuid()}><img id={uuid()} src={image.img}></img>
+<Draggable id={uuid()}><img id={uuid()} src={image.img} alt="memory game"></img>
                                        </Draggable>
                                        </section>
                                        <section>
-                                       <Draggable id={uuid()}><img id={uuid()} src={image.img2}></img>
+                                       <Draggable id={uuid()}><img id={uuid()} src={image.img2} alt="memory game"></img>
                                                                               </Draggable>
                                                                               </section>
                                                                               <section>
-                                                                              <Draggable id={uuid()}><img id={uuid()} src={image.img3}></img>
+                                                                              <Draggable id={uuid()}><img id={uuid()} src={image.img3} alt="memory game"></img>
                                                                                                                      </Draggable>
                                                                                                                      </section>
                                                                                                                      <section>
-                                                                                                                     <Draggable id={uuid()}><img id={uuid()} src={image.img4}></img>
+                                                                                                                     <Draggable id={uuid()}><img id={uuid()} src={image.img4} alt="memory game"></img>
                                                                                                                                                             </Draggable>
                                                                                                                                                             </section>
                                                                                                                                                             </div>
