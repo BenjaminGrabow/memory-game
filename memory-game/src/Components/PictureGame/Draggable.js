@@ -1,15 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 
-const StyledDiv = styled.div`
-
-/* width: 100%;
-height: 2rem;
-background-color: green;
-margin: 3rem; */
-
-`;
-
 export default class Draggable extends React.Component {
 
         drag = (e) => {

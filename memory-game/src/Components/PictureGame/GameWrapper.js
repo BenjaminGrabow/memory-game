@@ -16,12 +16,11 @@ img {
         color: #555;
         background-color: white;
         border-radius: .3rem;
-        width: 20%;
-        height: 3rem;
+        width: 70%;
+        height: 5rem;
 }
 
 `;
-
 
 
 export default class GameWrapper extends React.Component {
@@ -31,10 +30,24 @@ export default class GameWrapper extends React.Component {
                                <Droppable id="dr1" >
 {pictureData.map((image, index) => {
         return(
-        <div>
+                <div>
+        <section>
 <Draggable id={index}><img id={index} src={image.img}></img>
                                        </Draggable>
-                                       </div>
+                                       </section>
+                                       <section>
+                                       <Draggable id={index}><img id={index} src={image.img2}></img>
+                                                                              </Draggable>
+                                                                              </section>
+                                                                              <section>
+                                                                              <Draggable id={index}><img id={index} src={image.img3}></img>
+                                                                                                                     </Draggable>
+                                                                                                                     </section>
+                                                                                                                     <section>
+                                                                                                                     <Draggable id={index}><img id={index} src={image.img4}></img>
+                                                                                                                                                            </Draggable>
+                                                                                                                                                            </section>
+                                                                                                                                                            </div>
                                        )
 })}
                                </Droppable>

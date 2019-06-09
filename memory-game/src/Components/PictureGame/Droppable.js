@@ -5,9 +5,10 @@ import styled from "styled-components";
 const StyledDiv = styled.div`
 
 background-color: #555;
-width: 25rem;
-height: 40rem;
+width: 80%;
+height: 30rem;
 margin: 3.2rem;
+display: flex;
 
 `;
 
