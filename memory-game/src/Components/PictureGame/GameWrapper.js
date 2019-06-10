@@ -39,26 +39,26 @@ export default class GameWrapper extends React.Component {
     console.log(this.state.result)
   };
 
-  drag = (e) => {
-    e.dataTransfer.setData('transfer', e.target.id);
+  drag = (event) => {
+    event.dataTransfer.setData('transfer', event.target.id);
   };
 
-  dontAllowDrop = (e) => {
-    e.stopPropagation();
+  dontAllowDrop = (event) => {
+    event.stopPropagation();
   };
 
-  allowDrop = (e) => {
-    e.preventDefault();
-}
+  allowDrop = (event) => {
+    event.preventDefault();
+  }
 
-drop = (e) => {
-  e.preventDefault();
-  const data = e.dataTransfer.getData('transfer');
-  e.target.append(document.getElementById(data));
-}
+  drop = (event) => {
+    event.preventDefault();
+    const data = event.dataTransfer.getData('transfer');
+    event.target.append(document.getElementById(data));
+  }
 
 
-  src(e, props) {
+  src(event, props) {
 
 
     // this.setState( prevState => {
@@ -74,8 +74,8 @@ drop = (e) => {
       <div>
         <StyledDiv onClick={this.showme}>
           <Droppable id="dr1"
-           allowTheDrop={this.allowDrop}
-            theDrop = {this.drop}>
+            allowTheDrop={this.allowDrop}
+            theDrop={this.drop}>
             {this.state.pictures.map(image => {
               return (
                 <div key={uuid()}>
@@ -93,8 +93,8 @@ drop = (e) => {
             })}
           </Droppable>
           <Droppable id="dr2"
-          allowTheDrop={this.allowDrop}
-          theDrop = {this.drop} >
+            allowTheDrop={this.allowDrop}
+            theDrop={this.drop} >
           </Droppable>
         </StyledDiv>
         <button onClick={this.checkResult}>

@@ -15,12 +15,14 @@ flex-wrap: wrap;
 
 const Droppable = props => {
 
-                return (
-                        <StyledDiv id={props.id} onDrop={props.theDrop} onDragOver={props.allowTheDrop} >
-                                {props.children}
-                        </StyledDiv>
-                );
-        
+        return (
+                <StyledDiv id={props.id}
+                        onDrop={props.theDrop}
+                        onDragOver={props.allowTheDrop} >
+                        {props.children}
+                </StyledDiv>
+        );
+
 }
 
 export default Droppable;
