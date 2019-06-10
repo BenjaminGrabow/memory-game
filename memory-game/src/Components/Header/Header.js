@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-
 
 const StyledHeader = styled.header`
 width: 100%;
@@ -17,9 +15,12 @@ a {
 const Header = () => {
         return (
                 <StyledHeader>
-                        <NavLink to="/" >Home</NavLink>
-                        <NavLink to="/" >Home</NavLink>
-                        <NavLink to="/" >Home</NavLink>
+                        <nav>
+                                <a href="#">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Games</a>
+                                <a href="#">Team</a>
+                        </nav>
                 </StyledHeader>
           );
 }
