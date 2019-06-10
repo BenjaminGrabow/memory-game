@@ -47,6 +47,16 @@ export default class GameWrapper extends React.Component {
     e.stopPropagation();
   };
 
+  allowDrop = (e) => {
+    e.preventDefault();
+}
+
+drop = (e) => {
+  e.preventDefault();
+  const data = e.dataTransfer.getData('transfer');
+  e.target.append(document.getElementById(data));
+}
+
 
   src(e, props) {
 
@@ -63,7 +73,9 @@ export default class GameWrapper extends React.Component {
     return (
       <div>
         <StyledDiv onClick={this.showme}>
-          <Droppable id="dr1" >
+          <Droppable id="dr1"
+           allowTheDrop={this.allowDrop}
+            theDrop = {this.drop}>
             {this.state.pictures.map(image => {
               return (
                 <div key={uuid()}>
@@ -80,7 +92,9 @@ export default class GameWrapper extends React.Component {
               )
             })}
           </Droppable>
-          <Droppable id="dr2" >
+          <Droppable id="dr2"
+          allowTheDrop={this.allowDrop}
+          theDrop = {this.drop} >
           </Droppable>
         </StyledDiv>
         <button onClick={this.checkResult}>
