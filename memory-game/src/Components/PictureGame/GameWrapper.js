@@ -36,42 +36,56 @@ export default class GameWrapper extends React.Component {
     this.setState({
       pictures: pictureData,
     })
+    console.log(this.state.result)
   };
 
-  src(e, props) {
-    // const resultData = [{alt: e.target.alt}];
-    
-    console.log(props)
+  drag = (e) => {
+    e.dataTransfer.setData('transfer', e.target.id);
+  };
 
-    // this.setState({
-    //   result: this.state.result.concat(resultData)
+  dontAllowDrop = (e) => {
+    e.stopPropagation();
+  };
+
+
+  src(e, props) {
+
+
+    // this.setState( prevState => {
+    //  return {
+    //   result: prevState.pictures.filter(image => image.id === props.id)
+    //  }
     // })
   }
 
-  show(e) {
-    const copy = this.state.result;
-    console.log(copy)
-  }
-
   render() {
+    console.log(this.state.result)
     return (
       <div>
-        <StyledDiv>
+        <StyledDiv onClick={this.showme}>
           <Droppable id="dr1" >
             {this.state.pictures.map(image => {
               return (
                 <div key={uuid()}>
-                  <Draggable id={uuid()} safesrc={this.src}>
-                    <img id={uuid()} src={image.img} alt={image.alt}></img>
+                  <Draggable
+                    dragFunction={this.drag}
+                    noAllowDrop={this.dontAllowDrop}
+                    id={image.id}
+                    safesrc={this.src}>
+                    <img id={uuid()}
+                      src={image.img}
+                      alt={image.alt}></img>
                   </Draggable>
                 </div>
               )
             })}
           </Droppable>
-          <Droppable id="dr2" showme={this.show}>
+          <Droppable id="dr2" >
           </Droppable>
         </StyledDiv>
-        <button onClick={this.checkResult}>Show the result</button>
+        <button onClick={this.checkResult}>
+          Show the result
+          </button>
       </div>
     );
   }
