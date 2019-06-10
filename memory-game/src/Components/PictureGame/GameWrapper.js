@@ -36,7 +36,6 @@ export default class GameWrapper extends React.Component {
     this.setState({
       pictures: pictureData,
     })
-    console.log(this.state.result)
   };
 
   drag = (event) => {
@@ -53,26 +52,17 @@ export default class GameWrapper extends React.Component {
 
   drop = (event) => {
     event.preventDefault();
+
     const data = event.dataTransfer.getData('transfer');
+
     event.target.append(document.getElementById(data));
-  }
-
-
-  src(event, props) {
-
-
-    // this.setState( prevState => {
-    //  return {
-    //   result: prevState.pictures.filter(image => image.id === props.id)
-    //  }
-    // })
   }
 
   render() {
     console.log(this.state.result)
     return (
       <div>
-        <StyledDiv onClick={this.showme}>
+        <StyledDiv >
           <Droppable id="dr1"
             allowTheDrop={this.allowDrop}
             theDrop={this.drop}>
@@ -82,9 +72,10 @@ export default class GameWrapper extends React.Component {
                   <Draggable
                     dragFunction={this.drag}
                     noAllowDrop={this.dontAllowDrop}
+                    id={uuid()}
+                    >
+                    <img 
                     id={image.id}
-                    safesrc={this.src}>
-                    <img id={uuid()}
                       src={image.img}
                       alt={image.alt}></img>
                   </Draggable>
