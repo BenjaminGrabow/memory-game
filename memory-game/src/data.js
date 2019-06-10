@@ -1,71 +1,87 @@
 const pictureData = [
         {
                 img: "./Pictures/bulb.jpg",
-                alt: "bulb"
+                alt: "bulb",
+                id: 0
         },
         {
                 img: "./Pictures/chess.jpg",
-                alt: "chess"
+                alt: "chess",
+                id: 1
 
         },
         {
                 img: "./Pictures/chip.jpg",
-                alt: "chip"
+                alt: "chip",
+                id: 2
 
         },
         {
                 img: "./Pictures/colorfire.jpg",
-                alt: "colorfire"
+                alt: "colorfire",
+                id: 3
         },
         {
                 img: "./Pictures/earth.jpg",
-                alt: "earth"
+                alt: "earth",
+                id: 4
 
         },
         {
                 img: "./Pictures/fire.jpg",
-                alt: "fire"
+                alt: "fire",
+                id: 5
         },
         {
                 img: "./Pictures/foots.jpg",
-                alt: "foots"
+                alt: "foots",
+                id: 6
         },
         {
                 img: "./Pictures/haribo.jpg",
-                alt: "haribo"
+                alt: "haribo",
+                id: 7
         },
         {
                 img: "./Pictures/head.jpg",
-                alt: "head"
+                alt: "head",
+                id: 8
         },
         {
                 img: "./Pictures/monkey.jpg",
-                alt: "monkey"
+                alt: "monkey",
+                id: 9
         },
         {
                 img: "./Pictures/planet.jpg",
-                alt: "planet"
+                alt: "planet",
+                id: 10
         },
         {
                 img: "./Pictures/rubrik.jpg",
-                alt: "rubrik"
+                alt: "rubrik",
+                id: 11
         },
         {
                 img: "./Pictures/think.jpg",
-                alt: "think"
+                alt: "think",
+                id: 12
 
         },
         {
                 img: "../../Pictures/water.jpg",
-                alt: "water"
+                alt: "water",
+                id: 13
         },
         {
                 img: "../../Pictures/waterfall.jpg",
-                alt: "waterfall"
+                alt: "waterfall",
+                id: 14
         },
         {
                 img: "../../Pictures/Home.jpg",
-                alt: "home"
+                alt: "home",
+                id: 15
         }
 ]
 

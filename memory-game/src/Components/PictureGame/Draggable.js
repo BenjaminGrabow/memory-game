@@ -12,7 +12,7 @@ export default class Draggable extends React.Component {
 
         render() { 
                 return ( 
-                        <div id={this.props.id} draggable='true' onDragStart={this.drag} onDragOver={this.dontAllowDrop} onClick={this.props.safesrc} >
+                        <div id={this.props.id} draggable='true' onDragStart={this.drag} onDragOver={this.dontAllowDrop} onClick={event => this.props.safesrc(event, this.props)} >
 {this.props.children}
                         </div>
                  );

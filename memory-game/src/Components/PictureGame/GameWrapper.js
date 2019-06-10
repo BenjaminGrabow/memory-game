@@ -38,12 +38,14 @@ export default class GameWrapper extends React.Component {
     })
   };
 
-  src(e) {
-    const resultData = {alt: e.target.alt};
+  src(e, props) {
+    // const resultData = [{alt: e.target.alt}];
     
-    this.setState({
-      result: this.state.result.concat(resultData)
-    })
+    console.log(props)
+
+    // this.setState({
+    //   result: this.state.result.concat(resultData)
+    // })
   }
 
   show(e) {
